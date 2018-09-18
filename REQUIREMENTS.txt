@@ -5,4 +5,4 @@ numpy
 h5py
 statistics
 opencv-python
-ffmpeg-python
+tqdm
