@@ -33,10 +33,10 @@ $ cd face_classification/src
 ### Example usage
 This script requires four inputs:
 
-input_video = 'Path to input video'
-path_to_extract = 'Path for the frames extracted from the video'
-path_to_predict = 'Path for the predictions made by our model'
-output_video = 'Path to output video'
+- input_video = 'Path to input video'
+- path_to_extract = 'Path for the frames extracted from the video'
+- path_to_predict = 'Path for the predictions made by our model'
+- output_video = 'Path to output video'
 ```
 $ python run_demo_on_video.py {input_video} {path_to_extract} {path_to_predict} {output_video}
 ```
