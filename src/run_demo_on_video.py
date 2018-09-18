@@ -1,9 +1,13 @@
+import os
 import sys
+import glob
+import shutil
+from tqdm import trange
 import argparse
-
 import cv2
-from keras.models import load_model
 import numpy as np
+
+from keras.models import load_model
 
 from utils.datasets import get_labels
 from utils.inference import detect_faces
@@ -55,10 +59,6 @@ def run_emotion_gender_detector(input_video, path_to_extract, path_to_predict, o
 
     print("Extracting frames from video...")
     os.system('ffmpeg -i {} -vf fps=30 {}/thumb%04d.png'.format(input_video, image_path)
-
-    import glob
-    import shutil
-    from tqdm import trange
 
     images = glob.glob(os.path.join(image_path,"*.png"))
     images.sort()
