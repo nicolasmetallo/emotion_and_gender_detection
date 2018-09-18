@@ -33,7 +33,7 @@ $ cd face_classification/src
 ### Example usage
 ```
 $ python run_demo_on_video.py emotion-gender-demo.mp4 \
-  /content/emotion_and_gender_detection/extracted_frames \
-  /content/emotion_and_gender_detection/predicted_frames \
-  output_video.mp4
+      /content/emotion_and_gender_detection/extracted_frames \
+      /content/emotion_and_gender_detection/predicted_frames \
+      output_video.mp4
 ```
