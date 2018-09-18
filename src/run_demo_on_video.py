@@ -54,7 +54,7 @@ def run_emotion_gender_detector(input_video, path_to_extract, path_to_predict, o
     gender_target_size = gender_classifier.input_shape[1:3]
 
     print("Extracting frames from video...")
-    get_ipython().system_raw('ffmpeg -i {} -vf fps=30 {}/thumb%04d.png'.format(input_video, image_path))
+    os.system('ffmpeg -i {} -vf fps=30 {}/thumb%04d.png'.format(input_video, image_path)
 
     import glob
     import shutil
@@ -129,7 +129,7 @@ def run_emotion_gender_detector(input_video, path_to_extract, path_to_predict, o
 
     print("Done! Merging frames into video...\n")
     # convert frames to video using FFMPEG
-    get_ipython().system_raw('ffmpeg -r 25 -f image2 -i {}/predicted%04d.jpg \
+    os.system('ffmpeg -r 25 -f image2 -i {}/predicted%04d.jpg \
       -vcodec libx264 -crf 25 -pix_fmt yuv420p {}/output_video.mp4'.format(path_to_predict, path_to_predict))
 
 if __name__ == "__main__":
