@@ -31,6 +31,16 @@ $ cd face_classification/src
 ```
 
 ### Example usage
+This script requires four inputs:
+
+input_video = 'Path to input video'
+path_to_extract = 'Path for the frames extracted from the video'
+path_to_predict = 'Path for the predictions made by our model'
+output_video = 'Path to output video'
+```
+$ python run_demo_on_video.py {input_video} {path_to_extract} {path_to_predict} {output_video}
+```
+Example using the demo video in the repo
 ```
 $ python run_demo_on_video.py emotion-gender-demo.mp4 \
       /content/emotion_and_gender_detection/extracted_frames \
