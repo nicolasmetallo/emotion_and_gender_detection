@@ -2,12 +2,12 @@ import os
 import sys
 import glob
 import shutil
-from tqdm import trange
 import argparse
 import cv2
 import numpy as np
 
 from keras.models import load_model
+from tqdm import trange
 
 from utils.datasets import get_labels
 from utils.inference import detect_faces
@@ -125,7 +125,7 @@ def run_emotion_gender_detector(input_video, path_to_extract, path_to_predict, o
           draw_text(face_coordinates, rgb_image, emotion_text, color, 0, -50, 1, 2)
 
       bgr_image = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2BGR)
-      cv2.imwrite('/content/face_classification/predicted_frames/predicted%04d.jpg' % i, bgr_image)
+      cv2.imwrite(path_to_predict + '/predicted%04d.jpg' % i, bgr_image)
 
     print("Done! Merging frames into video...\n")
     # convert frames to video using FFMPEG
